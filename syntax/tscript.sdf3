@@ -1,0 +1,38 @@
+module tscript
+
+imports Common
+imports numbers
+imports strings
+
+context-free start-symbols
+  
+  Start
+
+context-free sorts
+
+  Start Stmt Bind Exp Type
+
+context-free syntax
+  
+  Start.Empty = <>
+
+	Start.Start = <<{Stmt "\n"}+>>
+	
+	Exp = <(<Exp>)> {bracket}
+	
+	Exp.Var    = <<ID>>
+	
+	
+	Stmt.Bind  = <<Type> <ID> = <Exp>;> // variable declaration
+	
+	Stmt.Exp = <<Exp>;> // statements must end with ;
+	
+
+	
+	
+	
+	
+	
+	
+	
+	

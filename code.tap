@@ -1,0 +1,6 @@
+int add = 9 + 4 * 2;
+int num = 2;
+int paren = -(2 + 4);
+int div = (2 + 3) * 4 / 2 / 2;
+int pow = 2 ** 3 ** 4;
+str word = "some" + "hi";

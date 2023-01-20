@@ -1,0 +1,31 @@
+Start(
+  [ Bind(
+      int()
+    , "add"
+    , Add(Int("9"), Mul(Int("4"), Int("2")))
+    )
+  , Bind(int(), "num", Int("2"))
+  , Bind(
+      int()
+    , "paren"
+    , Neg(Add(Int("2"), Int("4")))
+    )
+  , Bind(
+      int()
+    , "div"
+    , Div(
+        Div(
+          Mul(Add(Int("2"), Int("3")), Int("4"))
+        , Int("2")
+        )
+      , Int("2")
+      )
+    )
+  , Bind(
+      int()
+    , "pow"
+    , Pow(Int("2"), Pow(Int("3"), Int("4")))
+    )
+  , Bind(str(), "word", Add(Str("\"some\""), Str("\"hi\"")))
+  ]
+)
